@@ -367,17 +367,17 @@
           class="nx-inline nx-h-5 nx-shrink-0 ltr:nx-rotate-180"
           ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg
         >
-        {prev.name}
+        {$tt(`example.${prev.id}`) || prev.name}
       </a>
     {/if}
     {#if next}
       <a style="float: right; margin-bottom: 15px;" href={next.id}>
-        {next.name}
+        {$tt(`example.${next.id}`) || next.name}
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="nx-inline nx-h-5 nx-shrink-0 rtl:nx-rotate-180"
           ><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg
         >
       </a>
     {/if}
   </div>
-  <a class="allExamples" style="margin-bottom: 30px;" href="all">All Examples</a>
+  <a class="allExamples" style="margin-bottom: 30px;" href="all">{$tt('nav.allExamples')}</a>
 {/if}
